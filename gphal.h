@@ -21,9 +21,8 @@ typedef enum
     STATE_RUNNUNG,
 } gphal_state_t;
 
-uint32_t gphal_ticks;
-
-inline void gphal_tick_handler(uint32_t ticks) {gphal_ticks += ticks;}
+inline void gphal_tick_handler(uint32_t ticks);
+inline uint32_t gphal_get_ticks(void);
 
 #ifdef __cplusplus
 }

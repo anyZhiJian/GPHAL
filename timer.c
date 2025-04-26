@@ -59,7 +59,7 @@ void gphal_timer_start(gphal_timer_handle_t timer)
 {
     assert(timer);
     if(timer->state != STATE_READY) return;
-    timer->target_ticks = gphal_ticks + timer->remain_ticks;
+    timer->target_ticks = gphal_get_ticks() + timer->remain_ticks;
     timer->state = STATE_RUNNUNG;
 }
 
@@ -74,7 +74,7 @@ void gphal_timer_handler(gphal_timer_handle_t timer)
 {
     assert(timer);
     if(timer->state != STATE_RUNNUNG) return;
-    uint32_t now_ticks = gphal_ticks;
+    uint32_t now_ticks = gphal_get_ticks();
     timer->remain_ticks = timer->target_ticks - now_ticks;
     if((int32_t)(timer->remain_ticks) <= 0)
     {
