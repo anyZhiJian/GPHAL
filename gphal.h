@@ -9,8 +9,9 @@ extern "C" {
 #include <stdlib.h>
 #include <assert.h>
 
-#define gphal_malloc    malloc
-#define gphal_free      free
+#define gphal_malloc                    malloc
+#define gphal_free                      free
+#define gphal_assert                    assert
 #define gphal_gpio_write(pin, level)    0
 #define gphal_gpio_read(pin)            0
 
@@ -20,6 +21,8 @@ typedef enum
     STATE_READY,
     STATE_RUNNUNG,
 } gphal_state_t;
+
+typedef void (* gphal_cb_t)(void *param);
 
 inline void gphal_tick_handler(uint32_t ticks);
 inline uint32_t gphal_get_ticks(void);

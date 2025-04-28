@@ -2,7 +2,7 @@
 
 volatile static uint32_t gphal_ticks;
 
-inline void gphal_tick_handler(uint32_t ticks)
+inline void gphal_tick_handler(uint16_t ticks)
 {
     gphal_ticks += ticks;
 }
