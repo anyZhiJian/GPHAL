@@ -33,8 +33,8 @@ void gphal_timer_stop(gphal_timer_handle_t timer);
 void gphal_timer_handler(gphal_timer_handle_t timer);
 void gphal_timer_register_callback(gphal_timer_handle_t timer, gphal_cb_t cb, void *user_data);
 void gphal_timer_set_period(gphal_timer_handle_t timer, uint32_t period_ticks);
-inline uint32_t gphal_timer_get_alarm_count(gphal_timer_handle_t timer);
-inline void gphal_timer_clear_alarm_count(gphal_timer_handle_t timer);
+extern inline uint32_t gphal_timer_get_alarm_count(gphal_timer_handle_t timer);
+extern inline void gphal_timer_clear_alarm_count(gphal_timer_handle_t timer);
 
 #ifdef __cplusplus
 }

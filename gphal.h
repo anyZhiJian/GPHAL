@@ -24,8 +24,8 @@ typedef enum
 
 typedef void (* gphal_cb_t)(void *param);
 
-inline void gphal_tick_handler(uint32_t ticks);
-inline uint32_t gphal_get_ticks(void);
+extern inline void gphal_tick_handler(uint32_t ticks);
+extern inline uint32_t gphal_get_ticks(void);
 
 #ifdef __cplusplus
 }

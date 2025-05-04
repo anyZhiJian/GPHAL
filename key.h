@@ -66,7 +66,7 @@ void gphal_key_set_debounce(gphal_key_handle_t key, uint32_t debounce_ticks);
 void gphal_key_set_pressed_level(gphal_key_handle_t key, int pressed_level);
 void gphal_key_set_pin(gphal_key_handle_t key, int pin);
 void gphal_key_set_multi_press(gphal_key_handle_t key, uint32_t multi_press_interval_ticks);
-inline uint32_t gphal_key_get_multi_press_count(gphal_key_handle_t key);
+extern inline uint32_t gphal_key_get_multi_press_count(gphal_key_handle_t key);
 
 #ifdef __cplusplus
 }
